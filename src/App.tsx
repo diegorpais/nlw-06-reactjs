@@ -1,10 +1,16 @@
-/* import { Home } from "./pages/Home"; */
-import { NewRoom } from "./pages/NewRoom";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import { Home } from "./pages/Home";
+import { NewRoom } from "./pages/NewRoom";
 
 function App() {
   return (
-    <NewRoom />
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/rooms/new" component={NewRoom} exact />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
