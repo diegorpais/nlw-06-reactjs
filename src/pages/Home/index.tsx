@@ -19,7 +19,6 @@ export function Home() {
     
     if (!user) {
       await signInWithGoogle();
-      return;
     }
 
     history.push('/rooms/new');
